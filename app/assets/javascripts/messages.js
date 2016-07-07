@@ -6,15 +6,18 @@ $(function(){
         $('#message_text').val('');
     });
     
-    var pusher = new Pusher('44cc9a6cd5c292f42773', {
-      cluster: 'eu',
-      encrypted: true
-    });
+    // For Pusher:
+    
+    // var pusher = new Pusher('44cc9a6cd5c292f42773', {
+    //   cluster: 'eu',
+    //   encrypted: true
+    // });
 
-    var channel = pusher.subscribe('messages');
-    channel.bind('new', function(data) {
-      addMessage(data);
-    });
+    // var channel = pusher.subscribe('messages');
+    // channel.bind('new', function(data) {
+    //   addMessage(data);
+    // });
+    
 });
 
 function addMessage(data) {
