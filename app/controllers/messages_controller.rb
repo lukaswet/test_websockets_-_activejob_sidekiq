@@ -33,10 +33,6 @@ class MessagesController < ApplicationController
         
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
         format.json do
-          Pusher.trigger('messages', 'new', {
-            text: @message.text,
-            username: @message.username
-          })
           render :show, status: :created, location: @message
         end  
       else

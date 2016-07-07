@@ -48,3 +48,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pusher'
+
+gem 'rails-observers', github: 'rails/rails-observers'
