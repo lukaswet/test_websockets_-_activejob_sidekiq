@@ -7,6 +7,6 @@ class MessageObserver < ActiveRecord::Observer
   # end
   
   def after_create(message)
-    MessageJobJob.perform_later(message)
+    MessageJobJob.perform_later
   end
 end
