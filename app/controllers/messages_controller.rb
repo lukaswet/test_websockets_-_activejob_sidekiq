@@ -6,6 +6,8 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
     @message = Message.new
+    
+    # render json: { messages: @messages }
   end
 
   # GET /messages/1

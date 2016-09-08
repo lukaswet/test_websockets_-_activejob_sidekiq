@@ -13,5 +13,8 @@ module TestWebsockets
     # -- all .rb files in that directory are automatically loaded.
     config.active_record.observers = :message_observer
     # config.active_job.queue_adapter = :sidekiq
+    
+    config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+    config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
   end
 end
